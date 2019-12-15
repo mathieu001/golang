@@ -12,4 +12,5 @@ func main() {
 		sep = " "
 	}
 	fmt.Println(s)
+	fmt.Println("end")
 }
