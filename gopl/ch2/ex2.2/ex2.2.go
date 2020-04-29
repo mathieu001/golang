@@ -17,20 +17,20 @@ func process(arg string) {
 	{
 		f := conv.Fahrenheit(t)
 		c := conv.Celsius(t)
-		fmt.Printf("%s = %s, %s = %s\n", f, conv.FToC(f), c, conv.CToF)
+		fmt.Printf("%s = %s, %s = %s\n", f, conv.FToC(f), c, conv.CToF(c))
 
 	}
 
 	{
 		f := conv.Feet(t)
 		m := conv.Meter(t)
-		fmt.Printf("%s = %s, %s = %s\n", f, conv.FToM(f), m, conv.MToF)
+		fmt.Printf("%s = %s, %s = %s\n", f, conv.FToM(f), m, conv.MToF(m))
 	}
 }
 
 func main() {
 	if len(os.Args) > 1 {
-		for _, arg := range os.Args {
+		for _, arg := range os.Args[1:] {
 			process(arg)
 		}
 		return
