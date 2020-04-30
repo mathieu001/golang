@@ -26,6 +26,11 @@ func process(arg string) {
 		m := conv.Meter(t)
 		fmt.Printf("%s = %s, %s = %s\n", f, conv.FToM(f), m, conv.MToF(m))
 	}
+	{
+		p := conv.Pound(t)
+		k := conv.Kilogram(t)
+		fmt.Printf("%s = %s, %s = %s\n", p, conv.PToK(p), k, conv.KToP(k))
+	}
 }
 
 func main() {
